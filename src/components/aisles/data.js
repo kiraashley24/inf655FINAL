@@ -34,11 +34,6 @@ const aisle = [
     path: "/pantry" // Example path for pantry, update this to match your route
   },
   {
-    image: snowflake,
-    name: "Frozen",
-    path: "/frozen" // Example path for frozen, update this to match your route
-  },
-  {
     image: cookie,
     name: "Dessert",
     path: "/dessert" // Path for dessert

@@ -10,6 +10,7 @@ import Fruit from "./pages/fruit/Fruit";
 import Vegetable from "./pages/vegetables/Vegetable";
 import Meat from "./pages/meat/Meat";
 import Bread from "./pages/bread/Bread";
+import Pantry from "./pages/pantry/Pantry";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/vegetable" element={<Vegetable />} /> 
         <Route path="/meat" element={<Meat />} />
         <Route path="/bread" element={<Bread />} />
+        <Route path="/pantry" element={<Pantry />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </Router>

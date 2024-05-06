@@ -52,6 +52,14 @@ const Navbar = () => {
       </li>
       <li>
         <Link
+          to={"/pantry"}
+          className="hover:text-custom-peach transition-colors duration-200"
+        >
+          Pantry
+        </Link>
+      </li>
+      <li>
+        <Link
           to={"/dessert"}
           className="hover:text-custom-peach transition-colors duration-200"
         >
