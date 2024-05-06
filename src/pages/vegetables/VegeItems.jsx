@@ -1,16 +1,16 @@
-// FruitItems.jsx
+// VegeItems.jsx
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import fruitData from "./data";
+import vegeData from "./data";
 
-const FruitItems = () => {
+const VegeItems = () => {
   const { addToCart } = useContext(CartContext);
 
   return (
     <section className="text-gray-600 body-font bg-teal-900">
       <div className="container px-5 py-5 mx-auto">
         <div className="flex flex-wrap -m-4">
-          {fruitData.map((item, index) => (
+          {vegeData.map((item, index) => (
             <div key={index} className="p-4 w-full md:w-1/4">
               <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                 <img
@@ -46,4 +46,4 @@ const FruitItems = () => {
   );
 };
 
-export default FruitItems;
+export default VegeItems;

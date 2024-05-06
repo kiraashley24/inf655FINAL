@@ -72,7 +72,7 @@ const fruitData = [
     quantity: 1,
   },
   {
-    id: 7,
+    id: 8,
     image: strawberry,
     name: "Strawberry",
     desc: "Per lb", 
