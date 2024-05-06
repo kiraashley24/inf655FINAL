@@ -8,12 +8,12 @@ const navigate = useNavigate();
 const { addToCart } = React.useContext(CartContext);
   return (
     <div className="mt-10">
-      <div className="bg-amber-600 p-5">
+      <div className="bg-lime-600 p-5">
         <h1 className="text-center mb-5 text-2xl font-semibold">
           ***Current Discounted Items***
         </h1>
       </div>
-      <section className="text-gray-600 body-font bg-teal-900">
+      <section className="text-gray-600 body-font bg-yellow-100">
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap -m-4">
             {homeData.map((item, index) => {
@@ -29,7 +29,7 @@ const { addToCart } = React.useContext(CartContext);
                       src={image}
                       alt="img"
                     />
-                    <div className="p-6 bg-orange-100">
+                    <div className="p-6 bg-slate-50">
                       <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
                         {name.substring(0, 25)}
                       </h1>
@@ -38,7 +38,7 @@ const { addToCart } = React.useContext(CartContext);
                       </h1>
                       <div className="flex justify-center">
                         <button
-                          className=" bg-amber-500 hover:bg-yellow-600 w-full text-black py-[4px] rounded-lg font-bold"
+                          className=" bg-green-400 hover:bg-green-600 w-full text-black py-[4px] rounded-lg font-bold"
                           onClick={() => addToCart(item)}
                         >
                           Add to Cart

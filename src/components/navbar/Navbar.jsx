@@ -2,109 +2,95 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   faMagnifyingGlass,
-  faShoppingBag,
+  faCartShopping,
   faUser,
+  faLeaf
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
   const navList = (
-    <ul className="flex space-x-4 md:space-x-6 text-custom-mauve font-semibold text-sm md:text-base">
+    <ul className="flex space-x-4 md:space-x-6 text-gray-50 font-semibold text-sm md:text-base">
       <li>
         <Link
           to={"/"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Home
+          HOME
         </Link>
       </li>
       <li>
         <Link
           to={"/fruit"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Fruit
+          FRUIT
         </Link>
       </li>
       <li>
         <Link
           to={"/vegetable"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Vegetables
+          VEGETABLES
         </Link>
       </li>
       <li>
         <Link
           to={"/meat"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Meat
+          MEAT
         </Link>
       </li>
       <li>
         <Link
           to={"/bread"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Bread
+          BREAD
         </Link>
       </li>
       <li>
         <Link
           to={"/pantry"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Pantry
+          PANTRY
         </Link>
       </li>
       <li>
         <Link
           to={"/dessert"}
-          className="hover:text-custom-peach transition-colors duration-200"
+          className="hover:text-yellow-300 transition-colors duration-200"
         >
-          Dessert
-        </Link>
-      </li>
-      <li>
-        <Link
-          to={"/register"}
-          className="hover:text-custom-peach transition-colors duration-200"
-        >
-          Register
-        </Link>
-      </li>
-      <li>
-        <Link
-          to={"/cart"}
-          className="hover:text-custom-peach transition-colors duration-200"
-        >
-          Cart
+          DESSERT
         </Link>
       </li>
     </ul>
   );
 
   return (
-    <nav className="bg-custom-purple-dark sticky top-0 shadow-md">
+    <nav className="bg-green-600 sticky top-0 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 lg:px-8 flex justify-between items-center py-2 md:py-4">
         <div className="text-left">
-          <Link to={"/"}>
-            <h2 className="font-bold text-gray-800 text-lg md:text-2xl">STS</h2>
+        <Link to={"/"} className="flex items-center text-gray-50">
+            <h2 className="font-bold text-lg md:text-2xl mr-2">Enrichment Market</h2>
+            <FontAwesomeIcon icon={faLeaf} className="text-gray-50 fa-l" />
           </Link>
         </div>
         <div>{navList}</div>
         <div className="flex items-center space-x-4">
           {/* Uncomment the following line if SearchBar is ready to use */}
           {/* <SearchBar /> */}
-          <Link to={"/search"} className="text-gray-600 hover:text-gray-800">
+          <Link to={"/search"} className="text-gray-50 hover:text-yellow-300">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </Link>
-          <Link to={"/profile"} className="text-gray-600 hover:text-gray-800">
+          <Link to={"/profile"} className="text-gray-50 hover:text-yellow-300">
             <FontAwesomeIcon icon={faUser} />
           </Link>
-          <Link to={"/cart"} className="text-gray-600 hover:text-gray-800">
-            <FontAwesomeIcon icon={faShoppingBag} />
+          <Link to={"/cart"} className="text-gray-50 hover:text-yellow-300">
+            <FontAwesomeIcon icon={faCartShopping} />
           </Link>
         </div>
       </div>
