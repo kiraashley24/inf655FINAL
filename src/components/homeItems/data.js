@@ -5,12 +5,13 @@ import ketchup from "./images/ketchup.webp";
 import icecream from "./images/icecream.webp";
 import apple from "./images/apple.jpg";
 import broccoli from "./images/broccoli.jpg";
+import bread from "./images/bread.jpg";
 
 const homeData = [
   {
     id: 1,
     image: sauce,
-    name: "Tomato Sauce",
+    name: "Prego Tomato Sauce",
     desc: "Prego Sauce",
     price: 4,
     trendingItemName: "Featured",
@@ -28,7 +29,7 @@ const homeData = [
   {
     id: 3,
     image: bacon,
-    name: "Bacon",
+    name: "Oscar Mayer Bacon",
     desc: "Bacon",
     price: 6,
     trendingItemName: "Featured",
@@ -55,7 +56,7 @@ const homeData = [
   {
     id: 6,
     image: apple,
-    name: "Apple",
+    name: "Apples",
     desc: "Green or red", 
     price: 1,
     trendingItemName: "Featured",
@@ -66,6 +67,15 @@ const homeData = [
     image: broccoli,
     name: "Broccoli",
     desc: "Broccoli", 
+    price: 2,
+    trendingItemName: "Featured",
+    quantity: 1,
+  },
+  {
+    id: 8,
+    image: bread,
+    name: "Farmhouse Bread",
+    desc: "Bread", 
     price: 2,
     trendingItemName: "Featured",
     quantity: 1,
