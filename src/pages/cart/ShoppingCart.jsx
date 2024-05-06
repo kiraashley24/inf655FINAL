@@ -12,7 +12,7 @@ const ShoppingCart = () => {
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
   // Calculate discount (for example, 10% of total price)
-  const discount = totalPrice * 0.1;
+  const deliveryCharge = 4;
 
   return (
     <Layout>
@@ -77,7 +77,7 @@ const ShoppingCart = () => {
                           />
 
                           <span className="text-xs font-medium text-red-500">
-                            Remove
+                            Remove from cart
                           </span>
                         </button>
                       </div>
@@ -95,13 +95,13 @@ const ShoppingCart = () => {
                 id="summary-heading"
                 className=" border-b border-gray-200 px-4 py-3 text-lg font-medium text-gray-900 sm:p-4"
               >
-                Price Details
+              Price Details
               </h2>
               <div>
                 <dl className=" space-y-1 px-2 py-4">
                   <div className="flex items-center justify-between">
                     <dt className="text-sm text-gray-800">
-                      Price ({cart.length} item)
+                      Price ({cart.length} items)
                     </dt>
                     <dd className="text-sm font-medium text-gray-900">
                       ${totalPrice}
@@ -109,31 +109,26 @@ const ShoppingCart = () => {
                   </div>
                   <div className="flex items-center justify-between pt-4">
                     <dt className="flex items-center text-sm text-gray-800">
-                      <span>Discount</span>
+                      <span>Delivery Charge</span>
                     </dt>
                     <dd className="text-sm font-medium text-green-700">
-                      - ${discount}
+                      + ${deliveryCharge}
                     </dd>
                   </div>
-                  <div className="flex items-center justify-between py-4">
-                    <dt className="flex text-sm text-gray-800">
-                      <span>Delivery Charges</span>
-                    </dt>
-                    <dd className="text-sm font-medium text-green-700">Free</dd>
-                  </div>
+                  
                   <div className="flex items-center justify-between border-y border-dashed py-4 ">
                     <dt className="text-base font-medium text-gray-900">
-                      Total Amount
+                      Total Amount Due
                     </dt>
                     <dd className="text-base font-medium text-gray-900">
-                      ${totalPrice - discount}
+                      ${totalPrice + deliveryCharge}
                     </dd>
                   </div>
                 </dl>
                 <div className="px-2 pb-4 font-medium text-green-700">
                   <div className="flex gap-4 mb-6">
-                    <button className="w-full px-4 py-3 text-center text-gray-100 bg-pink-600 border border-transparent dark:border-gray-700 hover:border-pink-500 hover:text-pink-700 hover:bg-pink-100 rounded-xl">
-                      Buy now
+                    <button className="w-full px-4 py-3 text-center text-gray-100 bg-blue-600 border border-transparent dark:border-gray-700 hover:border-pink-500 hover:text-pink-700 hover:bg-pink-100 rounded-xl">
+                      Order Your Groceries
                     </button>
                   </div>
                 </div>
