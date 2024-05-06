@@ -70,9 +70,10 @@ const ShoppingCart = () => {
                         >
                           <FontAwesomeIcon
                             icon={faTrash}
-                            size={12}
+                            size="lg"
                             className="text-red-500"
                           />
+
                           <span className="text-xs font-medium text-red-500">
                             Remove
                           </span>

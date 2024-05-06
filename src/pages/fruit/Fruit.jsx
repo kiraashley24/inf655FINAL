@@ -5,7 +5,6 @@ import Hero from '../../components/hero/Hero';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLemon } from "@fortawesome/free-solid-svg-icons";
 import FruitItems from '../../components/fruitItems/FruitItems';
-import Review from '../../components/reviews/Revews';
 
 
 const Fruit = () => {
@@ -19,7 +18,6 @@ const Fruit = () => {
         <FontAwesomeIcon icon={faLemon} className="text-yellow-500 text-3xl" />
       </div>
         <FruitItems cart={cart} addToCart={addToCart} />
-        <Review />
       </Layout>
     </>
   );
