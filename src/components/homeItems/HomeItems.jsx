@@ -4,8 +4,9 @@ import homeData from "./data";
 import { CartContext } from "../../context/CartContext";
 
 const HomeItemCard = () => {
-const navigate = useNavigate();
-const { addToCart } = React.useContext(CartContext);
+  const navigate = useNavigate();
+  const { addToCart } = React.useContext(CartContext);
+
   return (
     <div className="mt-10">
       <div className="bg-lime-600 p-5">
@@ -29,21 +30,25 @@ const { addToCart } = React.useContext(CartContext);
                       src={image}
                       alt="img"
                     />
-                    <div className="p-6 bg-slate-50">
-                      <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
-                        {name.substring(0, 25)}
-                      </h1>
-                      <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
-                        ${price}
-                      </h1>
-                      <div className="flex justify-center">
-                        <button
-                          className=" bg-green-400 hover:bg-green-600 w-full text-black py-[4px] rounded-lg font-bold"
-                          onClick={() => addToCart(item)}
-                        >
-                          Add to Cart
-                        </button>
+                    <div className="p-6 bg-gray-50 flex justify-between">
+                      <div>
+                        <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
+                          {name.substring(0, 25)}
+                        </h1>
                       </div>
+                      <div>
+                        <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
+                          ${price}
+                          </h1>
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <button
+                        className=" bg-green-400 hover:bg-green-600 w-full text-black py-[4px] rounded-lg font-bold"
+                        onClick={() => addToCart(item)}
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   </div>
                 </div>

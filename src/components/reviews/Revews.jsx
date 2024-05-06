@@ -1,3 +1,7 @@
+import icecream from "./images/icecream.webp";
+import flakes from "./images/flakes.jpg";
+import peppers from "./images/peppers.jpg";
+
 const Review = () => {
     return (
       <div>
@@ -6,12 +10,11 @@ const Review = () => {
           <div className="container px-5 py-10 mx-auto">
             {/* Heading  */}
             <h1 className=" text-center text-3xl font-bold text-black">
-              Review
+              Product Reviews
             </h1>
             {/* para  */}
             <h2 className=" text-center text-2xl font-semibold mb-10">
-              What our <span className=" text-pink-500">customers</span> are
-              saying
+              Our customers' favorite items!
             </h2>
   
             <div className="flex flex-wrap -m-4">
@@ -21,19 +24,18 @@ const Review = () => {
                   <img
                     alt="review"
                     className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                    src="https://ecommerce-sk.vercel.app/img/kamal.png"
+                    src={icecream}
                   />
-                  <p className="leading-relaxed">
-                    Edison bulb retro cloud bread echo park, helvetica stumptown
-                    taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                    ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                    adaptogen squid fanny pack vaporware.
-                  </p>
-                  <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                   <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
-                    Kamal Nayan Upadhyay
+                    Blue Bell Ice Cream
                   </h2>
-                  <p className="text-gray-500">Senior Product Designer</p>
+                  <span className="inline-block h-1 w-5 rounded bg-orange-500 mt-6 mb-4 mr-2" />
+                  <span className="inline-block h-1 w-5 rounded bg-orange-500 mt-6 mb-4 mr-2" />
+                  <span className="inline-block h-1 w-5 rounded bg-orange-500 mt-6 mb-4" />
+                  <p className="leading-relaxed">
+                  I recommend this ice cream! It's my favorite.
+                  </p>
+                  
                 </div>
               </div>
   
@@ -43,19 +45,16 @@ const Review = () => {
                   <img
                     alt="review"
                     className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                    src="https://www.devknus.com/img/gawri.png"
+                    src={flakes}
                   />
-                  <p className="leading-relaxed">
-                    Edison bulb retro cloud bread echo park, helvetica stumptown
-                    taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                    ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                    adaptogen squid fanny pack vaporware.
-                  </p>
-                  <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                   <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
-                    S Mishra
-                  </h2>
-                  <p className="text-gray-500">UI Develeoper</p>
+                    CORN FLAKES
+                  </h2><span className="inline-block h-1 w-5 rounded bg-blue-500 mt-6 mb-4 mr-2" />
+                  <span className="inline-block h-1 w-5 rounded bg-blue-500 mt-6 mb-4 mr-2" />
+                  <span className="inline-block h-1 w-5 rounded bg-blue-500 mt-6 mb-4" />
+                  <p className="leading-relaxed">
+                    This cereal is my favorite and I can't seem to find it in any other store. This grocery store is the BEST.
+                  </p>
                 </div>
               </div>
   
@@ -65,21 +64,19 @@ const Review = () => {
                   <img
                     alt="review"
                     className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                    src="https://firebasestorage.googleapis.com/v0/b/devknus-official-database.appspot.com/o/images%2FScreenshot%202023-07-07%20at%202.20.32%20PM-modified.png?alt=media&token=324ddd80-2b40-422c-9f1c-1c1fa34943fa"
-                  />
+                    src={peppers}
+                  /><h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
+                  PEPPERS
+                </h2>
+                <span className="inline-block h-1 w-5 rounded bg-purple-500 mt-6 mb-4 mr-2" />
+                  <span className="inline-block h-1 w-5 rounded bg-purple-500 mt-6 mb-4 mr-2" />
+                  <span className="inline-block h-1 w-5 rounded bg-purple-500 mt-6 mb-4" />
                   <p className="leading-relaxed">
-                    Edison bulb retro cloud bread echo park, helvetica stumptown
-                    taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                    ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                    adaptogen squid fanny pack vaporware.
+                    Truly the freshest produce around. Peppers are a staple in our house.
                   </p>
-                  <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
-                  <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
-                    XYZ{" "}
-                  </h2>
-                  <p className="text-gray-500">CTO</p>
                 </div>
               </div>
+              
             </div>
           </div>
         </section>

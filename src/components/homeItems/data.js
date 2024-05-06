@@ -1,6 +1,6 @@
 import sauce from "./images/sauce.webp";
 import flakes from "./images/flakes.jpg";
-import pizza from "./images/pizza.jpg";
+import bacon from "./images/bacon.webp";
 import ketchup from "./images/ketchup.webp";
 import icecream from "./images/icecream.webp";
 import apple from "./images/apple.jpg";
@@ -12,7 +12,7 @@ const homeData = [
     image: sauce,
     name: "Tomato Sauce",
     desc: "Prego Sauce",
-    price: 150,
+    price: 4,
     trendingItemName: "Featured",
     quantity: 1,
   },
@@ -21,16 +21,16 @@ const homeData = [
     image: flakes,
     name: "Corn Flakes",
     desc: "Corn Flakes",
-    price: 150,
+    price: 4,
     trendingItemName: "Featured",
     quantity: 1,
   },
   {
     id: 3,
-    image: pizza,
-    name: "Pizza",
-    desc: "Digiorno",
-    price: 150,
+    image: bacon,
+    name: "Bacon",
+    desc: "Bacon",
+    price: 6,
     trendingItemName: "Featured",
     quantity: 1,
   },
@@ -39,16 +39,16 @@ const homeData = [
     image: ketchup,
     name: "Ketchup",
     desc: "Heinz", 
-    price: 150,
+    price: 4,
     trendingItemtName: "Featured",
     quantity: 1,
   },
   {
     id: 5,
     image: icecream,
-    name: "Ice Cream",
+    name: "Blue Bell  Ice Cream",
     desc: "Blue Bell Vanilla", 
-    price: 150,
+    price: 5,
     trendingItemName: "Featured",
     quantity: 1,
   },
@@ -57,7 +57,7 @@ const homeData = [
     image: apple,
     name: "Apple",
     desc: "Green or red", 
-    price: 150,
+    price: 1,
     trendingItemName: "Featured",
     quantity: 1,
   },
@@ -66,7 +66,7 @@ const homeData = [
     image: broccoli,
     name: "Broccoli",
     desc: "Broccoli", 
-    price: 150,
+    price: 2,
     trendingItemName: "Featured",
     quantity: 1,
   },
