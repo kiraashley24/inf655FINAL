@@ -5,6 +5,7 @@ import PageNotFound from "./pages/404/PageNotFound";
 import ItemInfo from "./pages/itemInfo/ItemInfo";
 import ShoppingCart from "./pages/cart/ShoppingCart";
 import TotalItems from "./pages/totalItems/totalItems";
+import Fruit from "./pages/fruit/Fruit";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/iteminfo" element={<ItemInfo />} />
         <Route path="/totalItems" element={<TotalItems />} />
         <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="/fruit" element={<Fruit />} />
       </Routes>
       </Router>
     </>
