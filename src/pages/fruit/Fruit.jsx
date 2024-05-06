@@ -1,22 +1,21 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import FruitItems from "./FruitItems";
+import fruitData from "./data";
+import Layout from "../../components/layout/Layout";
 
-const FruitPage = () => {
+const Fruit = () => {
   const { cart } = useContext(CartContext);
   const fruitItems = cart.filter(item => item.category === "fruit");
 
   return (
-    <div>
-      <h1>Fruit Items</h1>
-      <ul>
-        {fruitItems.map((item, index) => (
-          <li key={index}>
-            {item.name} - ${item.price}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout>
+      <div>
+        <h1>Fruit Items</h1>
+        <FruitItems fruitData={fruitData} />
+      </div>
+    </Layout>
   );
 };
 
-export default FruitPage;
+export default Fruit;
