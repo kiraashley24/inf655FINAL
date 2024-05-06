@@ -44,6 +44,14 @@ const Navbar = () => {
       </li>
       <li>
         <Link
+          to={"/bread"}
+          className="hover:text-custom-peach transition-colors duration-200"
+        >
+          Bread
+        </Link>
+      </li>
+      <li>
+        <Link
           to={"/dessert"}
           className="hover:text-custom-peach transition-colors duration-200"
         >

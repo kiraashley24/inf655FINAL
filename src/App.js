@@ -5,7 +5,12 @@ import PageNotFound from "./pages/404/PageNotFound";
 import ItemInfo from "./pages/itemInfo/ItemInfo";
 import ShoppingCart from "./pages/cart/ShoppingCart";
 import TotalItems from "./pages/totalItems/totalItems";
-import Dessert from "./pages/dessert/Dessert"; // Import the Dessert component
+import Dessert from "./pages/dessert/Dessert"; 
+import Fruit from "./pages/fruit/Fruit";
+import Vegetable from "./pages/vegetables/Vegetable";
+import Meat from "./pages/meat/Meat";
+import Bread from "./pages/bread/Bread";
+
 
 function App() {
   return (
@@ -16,7 +21,11 @@ function App() {
         <Route path="/iteminfo" element={<ItemInfo />} />
         <Route path="/totalItems" element={<TotalItems />} />
         <Route path="/cart" element={<ShoppingCart />} />
-        <Route path="/dessert" element={<Dessert />} /> {/* Add this line for the Dessert route */}
+        <Route path="/dessert" element={<Dessert />} /> 
+        <Route path="/fruit" element={<Fruit />} /> 
+        <Route path="/vegetable" element={<Vegetable />} /> 
+        <Route path="/meat" element={<Meat />} />
+        <Route path="/bread" element={<Bread />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </Router>

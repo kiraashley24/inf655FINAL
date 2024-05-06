@@ -1,16 +1,15 @@
-// VegeItems.jsx
-import React, { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
-import vegeData from "./data";
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import meatData from './data';
 
-const VegeItems = () => {
+const MeatItems = () => {
   const { addToCart } = useContext(CartContext);
 
   return (
     <section className="text-gray-600 body-font bg-teal-900">
       <div className="container px-5 py-5 mx-auto">
         <div className="flex flex-wrap -m-4">
-          {vegeData.map((item, index) => (
+          {meatData.map((item, index) => (
             <div key={index} className="p-4 w-full md:w-1/4">
               <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                 <img
@@ -21,9 +20,6 @@ const VegeItems = () => {
                 <div className="p-6 bg-orange-100">
                   <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
                     {item.name}
-                  </h1>
-                  <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
-                    {item.desc}
                   </h1>
                   <h1 className="name-font text-lg font-medium text-gray-900 mb-3">
                     ${item.price}
@@ -46,4 +42,4 @@ const VegeItems = () => {
   );
 };
 
-export default VegeItems;
+export default MeatItems;
