@@ -10,7 +10,7 @@ const { addToCart } = React.useContext(CartContext);
     <div className="mt-10">
       <div className="bg-amber-600 p-5">
         <h1 className="text-center mb-5 text-2xl font-semibold">
-          Best Selling Items
+          ***Current Discounted Items***
         </h1>
       </div>
       <section className="text-gray-600 body-font bg-teal-900">

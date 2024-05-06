@@ -8,12 +8,12 @@ import Review from '../../components/reviews/Revews.jsx';
 const Home = () => {
   return (
     <>
-    <Layout>
       <Hero />
-      <Aisle />
-      < HomeItemCard/>
-      < Review/>
-    </Layout>
+      <Layout>
+        <Aisle />
+        <HomeItemCard />
+        <Review />
+      </Layout>
     </>
   );
 };

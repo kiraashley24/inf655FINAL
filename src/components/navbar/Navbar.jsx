@@ -20,10 +20,34 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          to={"/totalItems"}
+          to={"/fruit"}
           className="hover:text-custom-peach transition-colors duration-200"
         >
-          Items
+          Fruit
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/vegetable"}
+          className="hover:text-custom-peach transition-colors duration-200"
+        >
+          Vegetables
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/meat"}
+          className="hover:text-custom-peach transition-colors duration-200"
+        >
+          Meat
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/dessert"}
+          className="hover:text-custom-peach transition-colors duration-200"
+        >
+          Dessert
         </Link>
       </li>
       <li>
@@ -33,12 +57,6 @@ const Navbar = () => {
         >
           Register
         </Link>
-      </li>
-      <li>
-        <Link to={"/user-dashboard"}>Kamal</Link> {/* User-Dashboard */}
-      </li>
-      <li>
-        <Link to={"/admin-dashboard"}>Admin</Link> {/* Admin Dashboard */}
       </li>
       <li>
         <Link
