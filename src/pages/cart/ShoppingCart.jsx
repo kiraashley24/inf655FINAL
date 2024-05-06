@@ -1,3 +1,4 @@
+// ShoppingCart.jsx
 import React from "react";
 import Layout from "../../components/layout/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,7 +6,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
 
 const ShoppingCart = () => {
-  const { cart } = React.useContext(CartContext);
+  const { cart, removeFromCart } = React.useContext(CartContext);
 
   // Calculate total price
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
@@ -67,6 +68,7 @@ const ShoppingCart = () => {
                         <button
                           type="button"
                           className="flex items-center space-x-1 px-2 py-1 pl-0"
+                          onClick={() => removeFromCart(item.id)}
                         >
                           <FontAwesomeIcon
                             icon={faTrash}
