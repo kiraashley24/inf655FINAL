@@ -11,7 +11,7 @@ const Home = () => {
       <Hero />
       <Layout>
         <Aisle />
-        <h1 className="text-center italic mb-5 text-4xl font-bold m-2">
+        <h1 className="text-center italic text-4xl font-bold m-2">
               <span className="text-red-500">*</span>
               <span className="text-orange-500">*</span>
               <span className="text-yellow-500">*</span>

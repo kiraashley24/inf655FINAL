@@ -15,7 +15,7 @@ const Bread = () => {
       <Hero />
       <Layout>
       <div className="flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-center italic text-green-600 mr-2">BREAD</h1>
+      <h1 className="text-4xl font-bold text-center italic text-green-600 m-2">BREAD</h1>
         <FontAwesomeIcon icon={faBreadSlice} className="text-yellow-800 text-3xl" />
       </div>
         <BreadItems cart={cart} addToCart={addToCart} />

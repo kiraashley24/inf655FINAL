@@ -14,7 +14,7 @@ const Fruit = () => {
       <Hero />
       <Layout>
       <div className="flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-center italic text-green-600 mr-2">FRUIT</h1>
+      <h1 className="text-4xl font-bold text-center italic text-green-600 m-2">FRUIT</h1>
         <FontAwesomeIcon icon={faLemon} className="text-yellow-500 text-3xl" />
       </div>
         <FruitItems cart={cart} addToCart={addToCart} />
