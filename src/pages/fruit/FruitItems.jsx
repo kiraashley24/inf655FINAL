@@ -1,7 +1,7 @@
+// FruitItems.jsx
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import fruitData from "./data";
-
 
 const FruitItems = () => {
   const { addToCart } = useContext(CartContext);
