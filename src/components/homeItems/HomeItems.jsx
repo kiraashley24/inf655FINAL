@@ -39,7 +39,7 @@ const HomeItemCard = () => {
                       </div>
                       <div className="flex justify-center">
                         <button
-                          className=" bg-green-400 hover:bg-green-600 w-full text-black py-[4px] rounded-lg font-bold"
+                          className=" bg-green-600 hover:bg-green-800 w-full text-white py-[4px] rounded-lg font-bold"
                           onClick={() => addToCart(item)}
                         >
                           Add to Cart

@@ -2,7 +2,7 @@ import aisle from "./data";
 
 const Aisle = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       <div className="flex flex-col mt-5">
         <div className="flex overflow-x-scroll lg:justify-center hide-scroll-bar">
           <div className="flex">

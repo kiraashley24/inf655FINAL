@@ -1,8 +1,10 @@
 // ShoppingCart.jsx
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import Layout from "../../components/layout/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
 
 const ShoppingCart = () => {
@@ -16,10 +18,10 @@ const ShoppingCart = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto px-4 max-w-7xl px-2 lg:px-0">
+      <div className="container mx-auto px-4 max-w-3xl">
         <div className="mx-auto max-w-2xl py-8 lg:max-w-7xl">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Shopping Cart
+          <h1 className="text-3xl font-bold tracking-tight text-center text-green-600 italic sm:text-4xl">
+            Shopping Cart <FontAwesomeIcon icon={faCartShopping} className="text-green-600 text-3xl" />
           </h1>
           <form className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
             <section
@@ -36,8 +38,8 @@ const ShoppingCart = () => {
                       <div className="flex-shrink-0">
                         <img
                           src={item.image}
-                          alt={item.title}
-                          className="sm:h-38 sm:w-38 h-24 w-24 rounded-md object-contain object-center"
+                          alt={item.name}
+                          className="sm:h-40 sm:w-40 h-32 w-32 rounded-md object-contain object-center"
                         />
                       </div>
 
@@ -50,7 +52,7 @@ const ShoppingCart = () => {
                                   href="#"
                                   className="font-semibold text-black"
                                 >
-                                  {item.title}
+                                  {item.name}
                                 </a>
                               </h3>
                             </div>
@@ -127,9 +129,11 @@ const ShoppingCart = () => {
                 </dl>
                 <div className="px-2 pb-4 font-medium text-green-700">
                   <div className="flex gap-4 mb-6">
-                    <button className="w-full px-4 py-3 text-center text-gray-100 bg-blue-600 border border-transparent dark:border-gray-700 hover:border-pink-500 hover:text-pink-700 hover:bg-pink-100 rounded-xl">
+                  <Link to="/ordersummary">
+                    <button className="w-full px-4 py-3 text-center text-gray-100 bg-blue-600 border border-transparent dark:border-gray-700 hover:border-green-500 hover:text-white hover:bg-green-800 rounded-xl">
                       Order Your Groceries
                     </button>
+                  </Link>
                   </div>
                 </div>
               </div>

@@ -4,6 +4,8 @@ import Hero from '../../components/hero/Hero.jsx';
 import Aisle from "../../components/aisles/Aisle.jsx";
 import HomeItemCard from '../../components/homeItems/HomeItems.jsx';
 import Review from '../../components/reviews/Revews.jsx';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
@@ -11,23 +13,11 @@ const Home = () => {
       <Hero />
       <Layout>
         <Aisle />
-        <h1 className="text-center italic text-4xl font-bold m-2">
-              <span className="text-red-500">*</span>
-              <span className="text-orange-500">*</span>
-              <span className="text-yellow-500">*</span>
-              <span className="text-green-600">D</span>
-              <span className="text-red-500">I</span>
-              <span className="text-orange-500">S</span>
-              <span className="text-yellow-500">C</span>
-              <span className="text-green-600">O</span>
-              <span className="text-red-500">U</span>
-              <span className="text-orange-500">N</span>
-              <span className="text-yellow-500">T</span>
-              <span className="text-green-600">S</span>
-              <span className="text-red-500">*</span>
-              <span className="text-orange-500">*</span>
-              <span className="text-yellow-500">*</span>
-            </h1>
+        <div className="flex items-center justify-center">
+        <FontAwesomeIcon icon={faArrowDown} className="text-green-600 text-3xl" />
+      <h1 className="text-4xl font-bold text-center italic text-green-600 m-2">Discounts</h1>
+        <FontAwesomeIcon icon={faArrowDown} className="text-green-600 text-3xl" />
+      </div>
         <HomeItemCard />
         <Review />
       </Layout>

@@ -13,6 +13,7 @@ import Bread from "./pages/bread/Bread";
 import Pantry from "./pages/pantry/Pantry";
 import Login from "./pages/user/Login";
 import Register from "./pages/user/Register";
+import Order from "./pages/cart/OrderSummary";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/pantry" element={<Pantry />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/ordersummary" element={<Order />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </Router>

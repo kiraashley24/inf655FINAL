@@ -81,11 +81,7 @@ const Navbar = () => {
         </div>
         <div>{navList}</div>
         <div className="flex items-center space-x-4">
-          {/* Uncomment the following line if SearchBar is ready to use */}
-          {/* <SearchBar /> */}
-          <Link to={"/search"} className="text-gray-50 hover:text-yellow-300">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </Link>
+          
           <Link to={"/login"} className="text-gray-50 hover:text-yellow-300">
             <FontAwesomeIcon icon={faUser} />
           </Link>
