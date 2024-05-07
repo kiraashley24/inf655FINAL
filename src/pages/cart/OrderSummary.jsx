@@ -33,7 +33,7 @@ const OrderSummary = () => {
         </div>
         <div className="flex justify-center mt-4">
           <button
-            className="bg-green-600 text-white px-4 py-2 rounded-md"
+            className="bg-green-600 text-white px-4 py-2 rounded-md hover:text-white hover:bg-green-800"
             onClick={clearCartAndReturnHome}
           >
             Return to Home Page

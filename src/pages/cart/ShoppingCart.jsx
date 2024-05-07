@@ -1,4 +1,3 @@
-// ShoppingCart.jsx
 import React from "react";
 import { Link } from 'react-router-dom';
 import Layout from "../../components/layout/Layout";
@@ -10,7 +9,7 @@ const ShoppingCart = () => {
   const { cart, removeFromCart } = React.useContext(CartContext);
 
   // Calculate total price
-  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   // Calculate discount (for example, 10% of total price)
   const deliveryCharge = 4;
@@ -57,7 +56,7 @@ const ShoppingCart = () => {
                             </div>
                             <div className="mt-1 flex items-end">
                               <p className="text-sm font-medium text-gray-900">
-                                ${item.price}
+                                ${item.price} x {item.quantity}
                               </p>
                             </div>
                           </div>
