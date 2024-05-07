@@ -11,6 +11,8 @@ import Vegetable from "./pages/vegetables/Vegetable";
 import Meat from "./pages/meat/Meat";
 import Bread from "./pages/bread/Bread";
 import Pantry from "./pages/pantry/Pantry";
+import Login from "./pages/user/Login";
+import Register from "./pages/user/Register";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route path="/meat" element={<Meat />} />
         <Route path="/bread" element={<Bread />} />
         <Route path="/pantry" element={<Pantry />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </Router>

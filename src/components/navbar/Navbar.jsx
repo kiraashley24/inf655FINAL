@@ -86,7 +86,7 @@ const Navbar = () => {
           <Link to={"/search"} className="text-gray-50 hover:text-yellow-300">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </Link>
-          <Link to={"/profile"} className="text-gray-50 hover:text-yellow-300">
+          <Link to={"/login"} className="text-gray-50 hover:text-yellow-300">
             <FontAwesomeIcon icon={faUser} />
           </Link>
           <Link to={"/cart"} className="text-gray-50 hover:text-yellow-300">
