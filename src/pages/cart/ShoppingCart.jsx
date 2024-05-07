@@ -1,7 +1,6 @@
 // ShoppingCart.jsx
 import React from "react";
 import { Link } from 'react-router-dom';
-
 import Layout from "../../components/layout/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faCartShopping } from "@fortawesome/free-solid-svg-icons";

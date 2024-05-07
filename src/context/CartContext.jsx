@@ -17,14 +17,21 @@ export const CartProvider = ({ children }) => {
     }
   };
   
-  
-
   const removeFromCart = (itemId) => {
     setCart(cart.filter((item) => item.id !== itemId));
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const clearCartAndReturnHome = () => {
+    clearCart();
+    window.location.href = '/'; // Redirect to home page
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCartAndReturnHome }}>
       {children}
     </CartContext.Provider>
   );
