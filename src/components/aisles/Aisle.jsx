@@ -8,7 +8,7 @@ const Aisle = () => {
           <div className="flex">
             {aisle.map((item, index) => (
               <div key={index} className="px-3 lg:px-10">
-                <div className="w-16 h-16 lg:w-24 lg:h-24 max-w-xs transition-all cursor-pointer mb-1">
+                <div className="w-16 h-16 lg:w-24 lg:h-24 max-w-xs transition-all mb-1">
                   <div className="flex justify-center mb-12">
                     <img src={item.image} alt="img" />
                   </div>

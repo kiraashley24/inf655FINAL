@@ -16,7 +16,7 @@ const Dessert = () => {
       <Layout>
         <div className="flex items-center justify-center">
           <h1 className="text-4xl font-bold text-center italic text-green-600 m-2">DESSERT</h1>
-          <FontAwesomeIcon icon={faCakeCandles} className="text-pink-200 text-3xl" />
+          <FontAwesomeIcon icon={faCakeCandles} className="text-pink-200 text-2xl" />
         </div>
         <DessertItems cart={cart} addToCart={addToCart}/>
       </Layout>

@@ -15,7 +15,7 @@ const Pantry = () => {
       <Layout>
         <div className="flex items-center justify-center">
           <h1 className="text-4xl font-bold text-center italic text-green-600 m-2">PANTRY</h1>
-          <FontAwesomeIcon icon={faLeaf} className="text-green-600 text-3xl" />
+          <FontAwesomeIcon icon={faLeaf} className="text-green-600 text-2xl" />
         </div>
         <PantryItems cart={cart} addToCart={addToCart}/>
       </Layout>
