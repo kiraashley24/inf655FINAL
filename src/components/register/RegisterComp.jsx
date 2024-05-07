@@ -2,92 +2,47 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import axios from 'axios';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
 const RegisterComp = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [address, setAddress] = useState('');
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const signUp = (e) => {
     e.preventDefault();
-    try {
-      await axios.post('http://localhost:4000/users/register', {
-        firstName,
-        lastName,
-        address,
-        username,
-        password
-      });
-      alert('User registered successfully');
-      // Reset the form
-      setFirstName('');
-      setLastName('');
-      setAddress('');
-      setUsername('');
-      setPassword('');
-    } catch (error) {
-      console.error('Error registering user:', error.message);
+    if (password.length < 6) {
+      setError('Password should be at least 6 characters');
+      return;
     }
+  
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setSuccessMessage('Registration successful!');
+        setEmail('');
+        setPassword('');
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
-
   return (
     <div className="container mx-auto px-4 max-w-lg py-8">
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={signUp} className="space-y-6">
+      {successMessage && <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">{successMessage}</div>}
+        {error && <div className="text-red-500">{error}</div>}
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-            First Name
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            Email
           </label>
           <input
             type="text"
-            id="firstName"
-            name="firstName"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 bg-gray-100"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-            Last Name
-          </label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 bg-gray-100"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-            Address
-          </label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 bg-gray-100"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-            Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 bg-gray-100"
             required
           />

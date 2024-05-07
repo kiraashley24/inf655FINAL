@@ -2,41 +2,41 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import axios from 'axios';
+import { auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const LoginComp = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:4000/users/login', {
-        username,
-        password
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setSuccessMessage('Login successful');
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        setError('Invalid email and/or password');
+        console.log(error);
       });
-      console.log('Login successful:', response.data);
-      // Reset the form
-      setUsername('');
-      setPassword('');
-    } catch (error) {
-      console.error('Error logging in:', error.message);
-    }
   };
 
   return (
     <div className="container mx-auto px-4 max-w-lg py-8">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-            Username
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            Email
           </label>
           <input
             type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 bg-gray-100"
             required
           />
@@ -63,6 +63,12 @@ const LoginComp = () => {
             Sign in
           </button>
         </div>
+        {error && (
+          <div className="text-red-500 text-sm text-center">{error}</div>
+        )}
+        {successMessage && (
+          <div className="text-green-500 text-sm text-center">{successMessage}</div>
+        )}
         <div className="text-center">
           <p className="text-sm text-gray-700">
             Don't have an account?{' '}
