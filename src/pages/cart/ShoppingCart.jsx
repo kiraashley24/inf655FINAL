@@ -29,7 +29,7 @@ const ShoppingCart = () => {
               <h2 id="cart-heading" className="sr-only">
                 Items in your shopping cart
               </h2>
-              <ul role="list" className="divide-y divide-gray-200">
+              <ul className="divide-y divide-gray-200">
                 {cart.map((item, index) => (
                   <div key={index} className="">
                     <li className="flex py-6 sm:py-6 ">
@@ -46,12 +46,9 @@ const ShoppingCart = () => {
                           <div>
                             <div className="flex justify-between">
                               <h3 className="text-sm">
-                                <a
-                                  href="#"
-                                  className="font-semibold text-black"
-                                >
-                                  {item.name}
-                                </a>
+                              <span className="font-semibold text-black">
+                                {item.name}
+                              </span>
                               </h3>
                             </div>
                             <div className="mt-1 flex items-end">
@@ -101,7 +98,7 @@ const ShoppingCart = () => {
                 <dl className=" space-y-1 px-2 py-4">
                   <div className="flex items-center justify-between">
                     <dt className="text-sm text-gray-800">
-                      Price ({cart.length} items)
+                    Quantity ({cart.reduce((total, item) => total + item.quantity, 0)} items)
                     </dt>
                     <dd className="text-sm font-medium text-gray-900">
                       ${totalPrice}
