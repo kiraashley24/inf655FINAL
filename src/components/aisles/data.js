@@ -3,7 +3,6 @@ import veges from "./images/vegetables.jpeg";
 import meat from "./images/homemeat.jpg";
 import bread from "./images/bread.jpg";
 import dry from "./images/dry.png";
-import snowflake from "./images/snowflake.png";
 import cookie from "./images/cookie.jpg";
 
 

@@ -10,14 +10,12 @@ const TotalItems = () => {
   return (
     <Layout>
       <div className="py-8">
-        {/* Heading  */}
         <div className="">
           <h1 className=" text-center mb-5 text-2xl font-semibold">
             All Items
           </h1>
         </div>
 
-        {/* main  */}
         <section className="text-gray-600 body-font bg-teal-900">
           <div className="container px-5 py-5 mx-auto">
             <div className="flex flex-wrap -m-4">
